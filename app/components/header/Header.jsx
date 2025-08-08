@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from "./Header.css";
+import { color } from 'motion';
 const Header = () => {
   return (
     <header>
         <div className="Logo">
-            <h1>revellison.ru</h1>
+            <a style={{ color: "white", textDecoration: "none"}} href="/"><h1>revellison.ru</h1></a>
         </div>
         <div className='star-container'>
             <img src="/header/star.svg" alt="Star" />

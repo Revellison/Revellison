@@ -2,7 +2,6 @@
 import DecryptedText from "../../reactbits/DecryptedText/DecryptedText";
 import React, { useEffect } from "react";
 import Xmark from "./xmark/xmark";
-import CircularText from "../../reactbits/CircularText/CircularText";
 import "./Hero.css"; 
 
 const HeroSection = () => {
@@ -29,6 +28,10 @@ const HeroSection = () => {
 
       <div className="hero-content">
         <div className="ris"></div>
+
+
+  {/* Anything placed inside this container will be fade into view */}
+
 
         <div className="hero-up">
           <div className="hero-up-left">

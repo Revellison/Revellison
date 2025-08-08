@@ -19,6 +19,14 @@
   font-style: normal;
 }
 
+::selection {
+  background: black;
+  color: rgb(107, 107, 107);
+}
+::-moz-selection {
+  background: black;
+  color: rgb(107, 107, 107);
+}
 
 body {
   background-color: black;
@@ -27,7 +35,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 
 * {
   padding: 0;
