@@ -2,9 +2,13 @@
   "name": "revelliso",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://revellison.github.io/Revellison",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
+    "predeploy": "npm run build && npm run export",
+    "deploy": "gh-pages -d out",
     "start": "next start",
     "lint": "next lint"
   },
@@ -15,5 +19,8 @@
     "ogl": "^1.0.11",
     "react": "19.1.0",
     "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
