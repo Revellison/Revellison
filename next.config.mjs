@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   basePath: "",
   assetPrefix: "",
-  trailingSlash: true,
+  trailingSlash: false,
   images: {
     unoptimized: true,
   },
