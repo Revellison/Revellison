@@ -28,11 +28,6 @@ const HeroSection = () => {
 
       <div className="hero-content">
         <div className="ris"></div>
-
-
-  {/* Anything placed inside this container will be fade into view */}
-
-
         <div className="hero-up">
           <div className="hero-up-left">
             <div className="hero-up-left-top">

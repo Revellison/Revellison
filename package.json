@@ -1,13 +1,13 @@
+
 {
-  "name": "revelliso",
+  "name": "revellison",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://revellison.github.io/Revellison",
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && echo > out/.nojekyll",
     "deploy": "gh-pages -d out",
+    "dev": "next dev",
     "start": "next start",
     "lint": "next lint"
   },
