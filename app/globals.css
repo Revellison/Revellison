@@ -1,5 +1,4 @@
 
-
 ::selection {
   background: black;
   color: rgb(107, 107, 107);
@@ -11,7 +10,7 @@
 
 body {
   background-color: black;
-  font-family: IBMPlexMono, sans-serif;
+  font-family: var(--font-plex);
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

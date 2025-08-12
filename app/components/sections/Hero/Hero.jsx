@@ -4,6 +4,8 @@ import React, { useEffect } from "react";
 import Xmark from "./xmark/xmark";
 import "./Hero.css"; 
 
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const HeroSection = () => {
   useEffect(() => {
     const script = document.createElement("script");
@@ -56,7 +58,7 @@ const HeroSection = () => {
         </div>
         
         <div className="hero-down">
-<img src="/Revellison/double_dropdown.svg" alt="Листать дальше" />
+          <img src={`${prefix}/double_dropdown.svg`} alt="Листать дальше" />
         </div>
       </div>
     </section>

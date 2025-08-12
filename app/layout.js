@@ -1,16 +1,13 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header/Header";
-import CustomCursor from "./components/CustomCursor/CustomCursor";
-import FontFaces from "./components/FontFaces/FontFaces";
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  variable: '--font-plex',
+  weight: ['400', '600', '700'],
+  display: 'swap',
 });
 
 export const metadata = {
@@ -20,12 +17,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <head>
-        <FontFaces />
-      </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Header/>
+    <html lang="en" className={ibmPlexMono.variable}>
+      <body className={``}>
+        <Header />
         {children}
       </body>
     </html>
