@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from "./Header.css";
 import { color } from 'motion';
+
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 const Header = () => {
   return (
     <header>
@@ -8,7 +10,7 @@ const Header = () => {
             <a style={{ color: "white", textDecoration: "none"}} href="/"><h1>revellison.ru</h1></a>
         </div>
         <div className='star-container'>
-            <img src="/header/star.svg" alt="Star" />
+        <img src={`${prefix}/header/star.svg`} alt="Star" />
         </div>
         <div className='Links'>      
             <a href="/portfolio">PORTFOLIO</a>
@@ -19,4 +21,3 @@ const Header = () => {
 };
 
 export default Header;
-

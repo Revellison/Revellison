@@ -3,9 +3,8 @@ const isProd = process.env.NODE_ENV === "production";
 const nextConfig = {
   output: "export",
   reactStrictMode: true,
-  basePath: "/Revellison",
-  assetPrefix: "/Revellison",
-  trailingSlash: false,
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH,
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH,
   images: {
     unoptimized: true,
   },

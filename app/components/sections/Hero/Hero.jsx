@@ -56,7 +56,7 @@ const HeroSection = () => {
         </div>
         
         <div className="hero-down">
-          <img src="/double_dropdown.svg" alt="Листать дальше" />
+<img src="/Revellison/double_dropdown.svg" alt="Листать дальше" />
         </div>
       </div>
     </section>
