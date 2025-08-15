@@ -207,7 +207,7 @@
 
   .hero-up-left-top-mobile {
     display: flex;
-    height: 100%;
+    height: 60%;
     align-items: flex-end;
     padding-bottom: 100px;
     animation: fadeIn 3s ease-in-out;
