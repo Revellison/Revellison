@@ -36,11 +36,15 @@ const HeroSection = () => {
               <DecryptedText className="hero-up-left-top-text" characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%&()' text="ADAPTIVE CORPORATE WEBSITES" animateOn="view" revealDirection="left" speed={100} maxIterations={20} sequential={true}/>
               <DecryptedText className="hero-up-left-top-text" characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%&()' text="LANDING PAGES AND ONLINE" animateOn="view" revealDirection="left" speed={100} maxIterations={20} sequential={true}/>
               <DecryptedText className="hero-up-left-top-text" characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%&()' text="STORES." animateOn="view" revealDirection="left" speed={100} maxIterations={20} sequential={true}/>
+              <DecryptedText className="hero-up-left-top-text-mobile" characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%&()' text="ADAPTIVE CORPORATE WEBSITES LANDING PAGES AND ONLINE STORES." animateOn="view" revealDirection="right" speed={50} maxIterations={20} sequential={true}/>
             </div>
             <div className="hero-up-left-bottom">
+              <div className="xmark-hero-up-left-bottom">
               <Xmark animationDuration="5s"/>
               <Xmark animationDuration="5.1s"/>
               <Xmark animationDuration="5.2s"/>
+              </div>
+              <img className="mobile-hero-star" src={`${prefix}/header/star.svg`} alt="Star" />
             </div>
           </div>
           <div className="hero-up-right">

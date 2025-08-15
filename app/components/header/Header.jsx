@@ -1,20 +1,23 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import styles from "./Header.css";
+import { usePathname } from 'next/navigation';
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
+const sidebarLinks = [
+  { href: '/', label: 'ГЛАВНАЯ' },
+  { href: '/portfolio', label: 'ПОРТФОЛИО' },
+  { href: '/contacts', label: 'КОНТАКТЫ' },
+];
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
+    document.body.style.overflow = isOpen ? 'hidden' : 'unset';
+    return () => { document.body.style.overflow = 'unset'; };
   }, [isOpen]);
 
   return (
@@ -42,19 +45,29 @@ const Header = () => {
         </div>
       </header>
 
-      {/* sidebar&overlay */}
       <div className={`sidebar-overlay ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(false)}></div>
-      
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
         <div className={`sidebar-chain ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(false)}>
           <img src={`${prefix}/header/sidebar_chain.svg`} alt="Chain" />
         </div>
         <div className='sb-conatiner'>
-        <nav>
-          <a href="/" onClick={() => setIsOpen(false)}>ГЛАВНАЯ</a>
-          <a href="/portfolio" onClick={() => setIsOpen(false)}>ПОРТФОЛИО</a>
-          <a href="/contacts" onClick={() => setIsOpen(false)}>КОНТАКТЫ</a>
-        </nav>
+          <nav>
+            {sidebarLinks.map(({ href, label }) => (
+              <a
+                key={href}
+                href={href}
+                onClick={() => setIsOpen(false)}
+                className={pathname === href ? "sidebar-link active" : "sidebar-link"}
+              >
+                {label}
+                {pathname === href && (
+                  <span className="active-icon" style={{marginLeft: '8px'}}>
+                    <img src={`${prefix}/header/star.svg`} alt="icon"/>
+                  </span>
+                )}
+              </a>
+            ))}
+          </nav>
         <div className={`sidebar-contacts ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(false)}>
             <div className='sidebar-links'>
               <a href="https://github.com/Revellison">github.com/Revellison</a>
