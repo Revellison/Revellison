@@ -42,15 +42,31 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Сайдбар и оверлей */}
+      {/* sidebar&overlay */}
       <div className={`sidebar-overlay ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(false)}></div>
       
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
+        <div className={`sidebar-chain ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(false)}>
+          <img src={`${prefix}/header/sidebar_chain.svg`} alt="Chain" />
+        </div>
+        <div className='sb-conatiner'>
         <nav>
           <a href="/" onClick={() => setIsOpen(false)}>ГЛАВНАЯ</a>
           <a href="/portfolio" onClick={() => setIsOpen(false)}>ПОРТФОЛИО</a>
           <a href="/contacts" onClick={() => setIsOpen(false)}>КОНТАКТЫ</a>
         </nav>
+        <div className={`sidebar-contacts ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(false)}>
+            <div className='sidebar-links'>
+              <a href="https://github.com/Revellison">github.com/Revellison</a>
+              <a href="https://x.com/Revell1s0n">x.com/Revell1s0n</a>
+              <a href="mailto:revellison@internet.ru">revellison@internet.ru</a>
+            </div>
+            <div className={`sidebar-logo ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(false)}>
+              <img src={`${prefix}/header/r.svg`} alt="r-logo" />
+            </div>
+        </div>
+        </div>
+
       </div>
     </>
   );
