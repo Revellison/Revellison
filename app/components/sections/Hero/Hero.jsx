@@ -29,6 +29,7 @@ const HeroSection = () => {
       </div>
 
       <div className="hero-content">
+        <img className="mobile-revellison-logo" src={`${prefix}/header/r.svg`} alt="Revellison" />
         <div className="ris"></div>
         <div className="hero-up">
           <div className="hero-up-left">
@@ -36,6 +37,8 @@ const HeroSection = () => {
               <DecryptedText className="hero-up-left-top-text" characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%&()' text="ADAPTIVE CORPORATE WEBSITES" animateOn="view" revealDirection="left" speed={100} maxIterations={20} sequential={true}/>
               <DecryptedText className="hero-up-left-top-text" characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%&()' text="LANDING PAGES AND ONLINE" animateOn="view" revealDirection="left" speed={100} maxIterations={20} sequential={true}/>
               <DecryptedText className="hero-up-left-top-text" characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%&()' text="STORES." animateOn="view" revealDirection="left" speed={100} maxIterations={20} sequential={true}/>
+            </div>
+            <div className="hero-up-left-top-mobile">
               <DecryptedText className="hero-up-left-top-text-mobile" characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%&()' text="ADAPTIVE CORPORATE WEBSITES LANDING PAGES AND ONLINE STORES." animateOn="view" revealDirection="right" speed={50} maxIterations={20} sequential={true}/>
             </div>
             <div className="hero-up-left-bottom">
