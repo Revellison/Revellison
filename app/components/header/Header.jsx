@@ -36,7 +36,7 @@ const Header = () => {
         </div>
         
         <div className='star-container'>
-          <img src={`${prefix}/header/star.svg`} alt="Star" />
+          <img src={"/header/star.svg"} alt="Star" />
         </div>
         
         <div className='Links'>      

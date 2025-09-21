@@ -29,7 +29,6 @@ const HeroSection = () => {
       </div>
 
       <div className="hero-content">
-        <img className="mobile-revellison-logo" src={"/header/r.svg"} alt="Revellison" />
         <div className="ris"></div>
         <div className="hero-up">
           <div className="hero-up-left">
@@ -38,16 +37,12 @@ const HeroSection = () => {
               <DecryptedText className="hero-up-left-top-text" characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%&()' text="LANDING PAGES AND ONLINE" animateOn="view" revealDirection="left" speed={100} maxIterations={20} sequential={true}/>
               <DecryptedText className="hero-up-left-top-text" characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%&()' text="STORES." animateOn="view" revealDirection="left" speed={100} maxIterations={20} sequential={true}/>
             </div>
-            <div className="hero-up-left-top-mobile">
-              <DecryptedText className="hero-up-left-top-text-mobile" characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%&()' text="ADAPTIVE CORPORATE WEBSITES LANDING PAGES AND ONLINE STORES." animateOn="view" revealDirection="right" speed={50} maxIterations={20} sequential={true}/>
-            </div>
             <div className="hero-up-left-bottom">
               <div className="xmark-hero-up-left-bottom">
               <Xmark animationDuration="5s"/>
               <Xmark animationDuration="5.1s"/>
               <Xmark animationDuration="5.2s"/>
               </div>
-              <img className="mobile-hero-star" src={"/header/star.svg"} alt="Star" />
             </div>
           </div>
           <div className="hero-up-right">
@@ -66,6 +61,32 @@ const HeroSection = () => {
         
         <div className="hero-down">
           <img src={"/double_dropdown.svg"} alt="Листать дальше" />
+        </div>
+      </div>
+
+      <div className="hero-mobile">
+        <div className="top-text">
+          <p>ADAPTIVE CORPORATE WEBSITES</p>
+          <p>LANDING PAGES AND ONLINE</p>
+          <p>STORES.</p>
+        </div>
+        
+        <div className="logo">
+              <div className="logo-mobile-right"><img className="mobile-hero-star" src={"/header/star.svg"} alt="Star" /></div>
+              <div className="logo-mobile-center"><img className="mobile-revellison-logo" src={"/header/r.svg"} alt="Revellison" /></div>
+              <div className="logo-mobile-left">
+                <Xmark animationDuration="5s"/>
+                <Xmark animationDuration="5.1s"/>
+                <Xmark animationDuration="5.2s"/>
+              </div>
+        </div>
+
+        <div className="bottom-text">
+          <div className="mobile-links">
+            <a href="https://github.com/Revellison">github.com/Revellison</a>
+            <a href="https://x.com/Revell1s0n">x.com/Revell1s0n</a>
+            <a href="mailto:revellison@internet.ru">revellison@internet.ru</a>
+          </div>
         </div>
       </div>
     </section>

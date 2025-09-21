@@ -12,17 +12,16 @@
   display: none;
 }
 
-.hero-up-left-top-text-mobile, .mobile-hero-star {
+.hero-mobile {
   display: none;
 }
+
 .hero {
   width: 100%;
   height: 100vh;
   overflow: hidden; 
 }
-.hero-up-left-top-mobile {
-    display: none;
-}
+
 
 .ris {
     width: 200px;
@@ -155,6 +154,25 @@
 }
 
 @media (max-width: 900px) {
+  @keyframes scaleIn {
+    0% {
+      transform: scale(1.1)
+    }
+    
+    100% {
+      transform: scale(1.0);
+    }
+  }
+  .hero-mobile {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .hero-content {
+    display: none;
+  }
   .mobile-revellison-logo {
     display: block;
     position: absolute;
@@ -168,59 +186,75 @@
     height: 100%;
   }
 
-  .hero-up-right{
-    align-items: flex-end;
-    padding-bottom: 20%;
-    gap: 70px;
-  }
-
-  .hero-up-right-bottom {
-    padding-right: 0 !important;
-    height: auto !important;
-    & .hero-up-right-bottom-links {
-      font-size: 1.1em !important;
-    }
-  }
-
-  .hero-up-left {
-    height: 50%;
-  }
-  .hero-up-left-bottom {
-    height: 5% !important;
-    & .xmark-hero-up-left-bottom {
-      display: none;
-    }
-    & .mobile-hero-star {
-      animation: spin 10s linear infinite;
-      display: block;
-    }
-  }
-  .hero-up-left-top {
-    height: 100% !important;
-    flex-direction: row;
-    width: 300px;
-    padding-bottom: 30px;
-  }
-  .hero-up-left-top, .hero-up-left-top-text {
-    display: none !important;
-  }
-
-  .hero-up-left-top-mobile {
+  .mobile-hero-star {
     display: flex;
-    height: 60%;
-    align-items: flex-end;
-    padding-bottom: 100px;
-    animation: fadeIn 3s ease-in-out;
-  }
-  
-  .hero-up-right-top {
-    width: 10%;
+    animation: spin 10s linear infinite;
   }
 
-  .hero-up-left-top-text-mobile {
-    display:inline;
-    font-size: 1.7em;
-    font-weight: 400;
-    max-width: 500px;
+  .top-text, .bottom-text {
+    color: white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    & a, p {
+      animation: fadeIn 3s ease-in-out;
+      font-size: 1.3em;
+      text-decoration: none;
+      color: white;
+      @media (max-width: 360px) {
+        font-size: 1.1em;
+      }
+    }
+  }
+
+  .top-text {
+    align-items: left;
+    padding-left: 5%;
+    @media (max-height: 660px) {
+      padding-top: 15%;
+    }
+    & a {
+      text-align: left;
+    }
+  }
+
+  .bottom-text {
+    padding-right: 5%;
+    align-items: flex-end;
+    & .mobile-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    & a {
+      text-align: left;
+    }
+  }
+
+  .logo {
+    justify-content: space-between;
+    flex-direction: row;
+    display: flex;
+    height: fit-content;
+    animation: scaleIn 1.5s;
+    & .logo-mobile-center {
+      height: 200px;
+      width: 200px;
+      align-items: flex-end;
+      display: flex;
+    }
+    & .logo-mobile-left {
+      gap: 5px;
+      animation: fadeIn 3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-right: 10px;
+    }
+    & .logo-mobile-right {
+      padding-left: 10px;
+      animation: fadeIn 3s ease-in-out;
+    }
   }
 }
