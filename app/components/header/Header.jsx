@@ -48,7 +48,7 @@ const Header = () => {
       <div className={`sidebar-overlay ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(false)}></div>
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
         <div className={`sidebar-chain ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(false)}>
-          <img src={`${prefix}/header/sidebar_chain.svg`} alt="Chain" />
+          <img src={"/header/sidebar_chain.svg"} alt="Chain" />
         </div>
         <div className='sb-conatiner'>
           <nav>
@@ -62,7 +62,7 @@ const Header = () => {
                 {label}
                 {pathname === href && (
                   <span className="active-icon" style={{marginLeft: '8px'}}>
-                    <img src={`${prefix}/header/star.svg`} alt="icon"/>
+                    <img src={"/header/star.svg"} alt="icon"/>
                   </span>
                 )}
               </a>
@@ -75,7 +75,7 @@ const Header = () => {
               <a href="mailto:revellison@internet.ru">revellison@internet.ru</a>
             </div>
             <div className={`sidebar-logo ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(false)}>
-              <img src={`${prefix}/header/r.svg`} alt="r-logo" />
+              <img src={"/header/r.svg"} alt="r-logo" />
             </div>
         </div>
         </div>

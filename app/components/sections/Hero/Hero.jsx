@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import Xmark from "./xmark/xmark";
 import "./Hero.css"; 
 
-const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
+// const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const HeroSection = () => {
   useEffect(() => {
@@ -29,7 +29,7 @@ const HeroSection = () => {
       </div>
 
       <div className="hero-content">
-        <img className="mobile-revellison-logo" src={`${prefix}/header/r.svg`} alt="Revellison" />
+        <img className="mobile-revellison-logo" src={"/header/r.svg"} alt="Revellison" />
         <div className="ris"></div>
         <div className="hero-up">
           <div className="hero-up-left">
@@ -47,7 +47,7 @@ const HeroSection = () => {
               <Xmark animationDuration="5.1s"/>
               <Xmark animationDuration="5.2s"/>
               </div>
-              <img className="mobile-hero-star" src={`${prefix}/header/star.svg`} alt="Star" />
+              <img className="mobile-hero-star" src={"/header/star.svg"} alt="Star" />
             </div>
           </div>
           <div className="hero-up-right">
@@ -65,7 +65,7 @@ const HeroSection = () => {
         </div>
         
         <div className="hero-down">
-          <img src={`${prefix}/double_dropdown.svg`} alt="Листать дальше" />
+          <img src={"/double_dropdown.svg"} alt="Листать дальше" />
         </div>
       </div>
     </section>
