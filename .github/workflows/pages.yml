@@ -32,6 +32,9 @@ jobs:
       - name: Create .nojekyll file
         run: echo > out/.nojekyll
 
+      - name: Create CNAME file with custom domain
+        run: echo "revellison.ru" > out/CNAME
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
