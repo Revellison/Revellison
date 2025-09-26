@@ -66,8 +66,9 @@ const HeroSection = () => {
 
       <div className="hero-mobile">
         <div className="top-text">
-          <p>ADAPTIVE CORPORATE WEBSITES</p>
-          <p>LANDING PAGES AND ONLINE</p>
+          <p>ADAPTIVE CORPORATE</p>
+          <p>WEBSITES LANDING</p>
+          <p>PAGES AND ONLINE</p>
           <p>STORES.</p>
         </div>
         
