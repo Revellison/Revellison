@@ -3,8 +3,7 @@ import DecryptedText from "../../reactbits/DecryptedText/DecryptedText";
 import React, { useEffect } from "react";
 import Xmark from "./xmark/xmark";
 import "./Hero.css"; 
-
-// const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
+import Plasma from '../../reactbits/Plasma/Plasma';
 
 const HeroSection = () => {
   useEffect(() => {
@@ -63,8 +62,9 @@ const HeroSection = () => {
           <img src={"/double_dropdown.svg"} alt="Листать дальше" />
         </div>
       </div>
-
+      
       <div className="hero-mobile">
+        <Plasma speed={0.6} direction="reverse" scale={0.5} opacity={0.13} mouseInteractive={false}/>
         <div className="top-text">
           <p>ADAPTIVE CORPORATE</p>
           <p>WEBSITES LANDING</p>
