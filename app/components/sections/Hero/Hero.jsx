@@ -64,7 +64,6 @@ const HeroSection = () => {
       </div>
       
       <div className="hero-mobile">
-        <Plasma speed={0.6} direction="reverse" scale={0.5} opacity={0.13} mouseInteractive={false}/>
         <div className="top-text">
           <p>ADAPTIVE CORPORATE</p>
           <p>WEBSITES LANDING</p>
